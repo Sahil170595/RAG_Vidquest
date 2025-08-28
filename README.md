@@ -85,7 +85,7 @@ This project uses a collection of lecture videos and their subtitles in `.vtt` f
 
 Download the raw dataset (videos + subtitles) here:
 
-🔗 [Google Drive - Video Dataset](https://your-drive-link)
+🔗 {Contact for dataset link}
 
 Place them in the following structure:
 ````
