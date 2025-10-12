@@ -1,0 +1,78 @@
+# Core ML and AI functionality
+sentence-transformers==2.5.1
+qdrant-client==1.6.3
+transformers==4.51.3
+huggingface-hub==0.30.2
+tokenizers==0.21.1
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Database and storage
+pymongo==4.6.3
+motor==3.3.2  # Async MongoDB driver
+redis==5.0.1  # For caching and rate limiting
+
+# Web framework and API
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Video processing
+opencv-python==4.8.1.78
+ffmpeg-python==0.2.0
+decord==0.6.0
+
+# Subtitle processing
+webvtt-py==0.4.6
+
+# HTTP and networking
+requests==2.31.0
+httpx==0.25.2  # Async HTTP client
+aiofiles==23.2.1
+
+# Data processing and utilities
+numpy==1.26.4
+scipy==1.13.0
+pandas==2.1.4
+tqdm==4.66.4
+
+# Configuration and environment
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Logging and monitoring
+structlog==23.2.0
+prometheus-client==0.19.0
+
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+httpx==0.25.2  # For testing FastAPI
+factory-boy==3.3.0
+
+# Code quality and formatting
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+pre-commit==3.6.0
+
+# Development and debugging
+ipython==8.17.2
+jupyter==1.0.0
+
+# Optional: Topic modeling (if needed)
+bertopic==0.17.0
+umap-learn==0.5.7
+hdbscan==0.8.40
+
+# Optional: Gradio for demo (can be removed in production)
+gradio==4.26.0
