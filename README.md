@@ -1,9 +1,9 @@
 # 🎓 RAG Vidquest - Enterprise Video RAG System
 
-[![CI/CD Pipeline](https://github.com/yourusername/RAG_Vidquest/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/yourusername/RAG_Vidquest/actions)
-[![Code Coverage](https://codecov.io/gh/yourusername/RAG_Vidquest/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/RAG_Vidquest)
-[![Security Scan](https://github.com/yourusername/RAG_Vidquest/workflows/Security%20Scan/badge.svg)](https://github.com/yourusername/RAG_Vidquest/security)
-[![Docker](https://img.shields.io/docker/v/yourusername/rag-vidquest?label=docker)](https://hub.docker.com/r/yourusername/rag-vidquest)
+[![CI/CD Pipeline](https://github.com/Sahil170595/RAG_Vidquest/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/Sahil170595/RAG_Vidquest/actions)
+[![Code Coverage](https://codecov.io/gh/Sahil170595/RAG_Vidquest/branch/main/graph/badge.svg)](https://codecov.io/gh/Sahil170595/RAG_Vidquest)
+[![Security Scan](https://github.com/Sahil170595/RAG_Vidquest/workflows/Security%20Scan/badge.svg)](https://github.com/Sahil170595/RAG_Vidquest/security)
+[![Docker](https://img.shields.io/docker/v/Sahil170595/rag-vidquest?label=docker)](https://hub.docker.com/r/Sahil170595/rag-vidquest)
 
 A production-ready Retrieval-Augmented Generation (RAG) system for querying video content with enterprise-grade architecture, monitoring, security, and scalability.
 
@@ -47,24 +47,24 @@ A production-ready Retrieval-Augmented Generation (RAG) system for querying vide
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/RAG_Vidquest.git
+   git clone https://github.com/Sahil170595/RAG_Vidquest.git
    cd RAG_Vidquest
    ```
 
 2. **Start services with Docker Compose**
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 3. **Install Ollama model**
    ```bash
-   docker exec ollama ollama pull gemma2:2b
+   docker exec ollama ollama pull gemma:2b
    ```
 
 4. **Run the application**
    ```bash
    # Development mode
-   docker-compose up rag-vidquest
+   docker compose up rag-vidquest
    
    # Or run locally
    pip install -r requirements.txt
@@ -83,7 +83,7 @@ A production-ready Retrieval-Augmented Generation (RAG) system for querying vide
 docker build --target production -t rag-vidquest:latest .
 
 # Run with production profile
-docker-compose --profile production up -d
+docker compose --profile production up -d
 ```
 
 ## 📚 API Documentation
@@ -151,7 +151,7 @@ GET /metrics
 | `QDRANT_HOST` | Qdrant host | `localhost` |
 | `QDRANT_PORT` | Qdrant port | `6333` |
 | `OLLAMA_URL` | Ollama API URL | `http://localhost:11434/api/chat` |
-| `OLLAMA_MODEL` | Ollama model name | `gemma2:2b` |
+| `OLLAMA_MODEL` | Ollama model name | `gemma:2b` |
 | `LOG_LEVEL` | Logging level | `INFO` |
 | `SECRET_KEY` | Secret key for security | `your-secret-key` |
 
@@ -229,13 +229,13 @@ open htmlcov/index.html
 
 ```bash
 # Development
-docker-compose up -d
+docker compose up -d
 
 # Production
-docker-compose --profile production up -d
+docker compose --profile production up -d
 
 # With monitoring
-docker-compose --profile production --profile monitoring up -d
+docker compose --profile production --profile monitoring up -d
 ```
 
 ### Kubernetes Deployment
@@ -274,7 +274,119 @@ helm install rag-vidquest ./helm-chart
 - **Load Balancing**: Nginx load balancer
 - **Database Scaling**: MongoDB replica sets, Qdrant clustering
 
+## 👥 Community & Learning
+
+### Join Our Learning Community
+
+This project is designed to be educational and welcoming to students and developers of all levels.
+
+#### 🌟 Available Resources
+
+- **GitHub Discussions**: [Ask questions](https://github.com/Sahil170595/RAG_Vidquest/discussions) and share ideas
+- **GitHub Issues**: [Report bugs](https://github.com/Sahil170595/RAG_Vidquest/issues) and request features
+- **Documentation**: Comprehensive guides in QUICK_START.md and CONTRIBUTING.md
+- **Code Examples**: Real working codebase to study and learn from
+
+#### 🎓 Educational Value
+
+**For Students:**
+- **Real-world Project**: Learn from a production-ready codebase
+- **Modern Technologies**: FastAPI, Docker, MongoDB, Vector Databases
+- **AI/ML Integration**: RAG systems, embeddings, and LLM integration
+- **Best Practices**: Testing, documentation, and deployment
+
+**For Developers:**
+- **Enterprise Architecture**: Microservices, monitoring, and security
+- **Open Source Contribution**: Practice contributing to real projects
+- **Code Review Experience**: Learn through PR feedback and discussions
+- **Portfolio Building**: Add meaningful contributions to your resume
+
+#### 🏆 Recognition
+
+- **Contributor Recognition**: Contributors listed in CONTRIBUTORS.md
+- **GitHub Profile**: Showcase your contributions on your profile
+- **Learning Portfolio**: Use this project in your academic/professional portfolio
+- **Skill Development**: Gain experience with modern development tools
+
+## 🎓 Student-Friendly Learning Environment
+
+### For Undergraduate Students
+
+This project provides a real-world example of enterprise software development with AI/ML integration. Perfect for learning modern development practices!
+
+#### 🚀 Getting Started as a Student
+
+1. **Prerequisites**
+   - Basic Python knowledge (variables, functions, classes)
+   - Understanding of APIs and HTTP requests
+   - Familiarity with Git basics
+   - Docker basics (we'll guide you!)
+
+2. **Learning Path**
+   ```
+   Week 1-2: Setup & Understanding
+   ├── Clone the repository
+   ├── Run the application with Docker
+   ├── Explore the codebase structure
+   └── Read QUICK_START.md and CONTRIBUTING.md
+
+   Week 3-4: First Contributions
+   ├── Fix documentation typos
+   ├── Add unit tests in tests/unit/
+   ├── Improve error messages
+   └── Add code comments
+
+   Week 5-8: Feature Development
+   ├── Implement new API endpoints
+   ├── Add new video processing features
+   ├── Improve error handling
+   └── Optimize performance
+   ```
+
+#### 📚 Learning Resources
+
+**Core Technologies Used:**
+- [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/) - Modern Python web framework
+- [MongoDB University](https://university.mongodb.com/) - Database fundamentals
+- [Qdrant Documentation](https://qdrant.tech/documentation/) - Vector databases
+- [Docker for Beginners](https://docker-curriculum.com/) - Containerization
+
+**AI/ML Concepts:**
+- [RAG Systems Explained](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html) - Retrieval Augmented Generation
+- [Vector Embeddings Guide](https://platform.openai.com/docs/guides/embeddings) - Understanding embeddings
+- [Ollama Documentation](https://ollama.ai/docs) - Local LLM deployment
+
+**Development Practices:**
+- [Git Workflow Guide](https://www.atlassian.com/git/tutorials/comparing-workflows)
+- [Python Testing with pytest](https://docs.pytest.org/en/stable/getting-started.html)
+- [API Design Best Practices](https://restfulapi.net/)
+
+#### 🎯 Beginner-Friendly Tasks
+
+**Good First Issues** (look for the `good first issue` label):
+- 📝 Documentation improvements in README.md, QUICK_START.md
+- 🧪 Adding unit tests in tests/unit/
+- 🐛 Bug fixes in error handling
+- 📊 Adding logging statements
+- 🔧 Configuration improvements in src/config/
+- 🧹 Code cleanup and refactoring
+
+**Available Learning Opportunities:**
+- Study the existing codebase structure
+- Run and modify the test suite
+- Experiment with API endpoints
+- Learn Docker containerization
+
 ## 🤝 Contributing
+
+### For Students
+
+1. **Read the documentation**: Start with QUICK_START.md and CONTRIBUTING.md
+2. **Fork the repository** and clone your fork
+3. **Pick a good first issue** or ask for recommendations in GitHub Discussions
+4. **Ask questions** - we're here to help through GitHub Issues and Discussions!
+
+### Standard Contribution Process
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -288,6 +400,7 @@ helm install rag-vidquest ./helm-chart
 - Write comprehensive tests
 - Update documentation
 - Use conventional commits
+- Ask questions in PR comments - learning is encouraged!
 
 ## 📄 License
 
@@ -295,10 +408,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- **Documentation**: [Wiki](https://github.com/yourusername/RAG_Vidquest/wiki)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/RAG_Vidquest/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/RAG_Vidquest/discussions)
-- **Email**: support@yourdomain.com
+- **Documentation**: [Wiki](https://github.com/Sahil170595/RAG_Vidquest/wiki)
+- **Issues**: [GitHub Issues](https://github.com/Sahil170595/RAG_Vidquest/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Sahil170595/RAG_Vidquest/discussions)
 
 ## 🙏 Acknowledgments
 

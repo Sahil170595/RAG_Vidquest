@@ -28,7 +28,7 @@ def check_docker():
 def check_docker_compose():
     """Check if Docker Compose is available."""
     try:
-        result = subprocess.run(['docker-compose', '--version'], capture_output=True, text=True)
+        result = subprocess.run(['docker', 'compose', '--version'], capture_output=True, text=True)
         if result.returncode == 0:
             print(f"✅ Docker Compose found: {result.stdout.strip()}")
             return True
@@ -45,7 +45,7 @@ def start_services():
     
     try:
         # Start core services
-        subprocess.run(['docker-compose', 'up', '-d', 'mongodb', 'qdrant', 'redis'], check=True)
+        subprocess.run(['docker compose', 'up', '-d', 'mongodb', 'qdrant', 'redis'], check=True)
         print("✅ Core services started (MongoDB, Qdrant, Redis)")
         
         # Wait a bit for services to initialize
@@ -53,7 +53,7 @@ def start_services():
         time.sleep(10)
         
         # Start Ollama
-        subprocess.run(['docker-compose', 'up', '-d', 'ollama'], check=True)
+        subprocess.run(['docker compose', 'up', '-d', 'ollama'], check=True)
         print("✅ Ollama service started")
         
         # Wait for Ollama to be ready
@@ -62,7 +62,7 @@ def start_services():
         
         # Pull the model
         print("📥 Pulling Gemma model...")
-        subprocess.run(['docker', 'exec', 'ollama', 'ollama', 'pull', 'gemma2:2b'], check=True)
+        subprocess.run(['docker', 'exec', 'ollama', 'ollama', 'pull', 'gemma:2b'], check=True)
         print("✅ Gemma model downloaded")
         
         return True
@@ -77,7 +77,7 @@ def start_application():
     
     try:
         # Start the application
-        subprocess.run(['docker-compose', 'up', '-d', 'rag-vidquest'], check=True)
+        subprocess.run(['docker compose', 'up', '-d', 'rag-vidquest'], check=True)
         print("✅ RAG Vidquest application started")
         
         # Wait for application to be ready
@@ -131,10 +131,10 @@ def show_access_info():
     print("• Clips: 3 pre-generated clips")
     print("• Total Size: ~2GB")
     print("\n🛠️ Management Commands:")
-    print("• View logs: docker-compose logs rag-vidquest")
-    print("• Stop system: docker-compose down")
-    print("• Restart: docker-compose restart rag-vidquest")
-    print("• Deploy to production: docker-compose -f docker-compose.yml up -d")
+    print("• View logs: docker compose logs rag-vidquest")
+    print("• Stop system: docker compose down")
+    print("• Restart: docker compose restart rag-vidquest")
+    print("• Deploy to production: docker compose -f docker compose.yml up -d")
     print("="*60)
 
 def main():
@@ -168,7 +168,7 @@ def main():
     # Check health
     if not check_health():
         print("⚠️ Application may still be starting. Check logs with:")
-        print("docker-compose logs rag-vidquest")
+        print("docker compose logs rag-vidquest")
         return False
     
     # Show access information

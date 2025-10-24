@@ -32,7 +32,7 @@ class ModelConfig(BaseSettings):
     
     embedding_model: str = Field(default="all-MiniLM-L6-v2")
     ollama_url: str = Field(default="http://localhost:11434/api/chat")
-    ollama_model: str = Field(default="gemma3")
+    ollama_model: str = Field(default="gemma:2b")
     max_tokens: int = Field(default=1000)
     temperature: float = Field(default=0.7)
     

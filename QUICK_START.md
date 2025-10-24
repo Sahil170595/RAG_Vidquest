@@ -13,7 +13,7 @@ RAG Vidquest is an enterprise-grade video question-answering system that allows 
 
 ### 1. Clone and Setup
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Sahil170595/RAG_Vidquest.git
 cd RAG_Vidquest
 ```
 
@@ -23,7 +23,7 @@ cd RAG_Vidquest
 python start_system.py
 
 # Or manually with Docker Compose
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 3. Access the System
@@ -115,7 +115,7 @@ QDRANT_PORT=6333
 
 # AI Models
 OLLAMA_URL=http://ollama:11434/api/chat
-OLLAMA_MODEL=gemma2:2b
+OLLAMA_MODEL=gemma:2b
 EMBEDDING_MODEL=all-MiniLM-L6-v2
 
 # Security
@@ -140,7 +140,7 @@ Edit `src/config/settings.py` to customize:
 ### Adding New Videos
 1. Place video files in `data/videos/`
 2. Add corresponding subtitle files to `data/subtitles/`
-3. Restart the system: `docker-compose restart rag-vidquest`
+3. Restart the system: `docker compose restart rag-vidquest`
 
 ### Data Structure
 ```
@@ -158,25 +158,25 @@ data/
 ### Local Development
 ```bash
 # Start with Docker Compose
-docker-compose up -d
+docker compose up -d
 
 # View logs
-docker-compose logs rag-vidquest
+docker compose logs rag-vidquest
 
 # Stop system
-docker-compose down
+docker compose down
 ```
 
 ### Production Deployment
 ```bash
 # Build and deploy
-docker-compose -f docker-compose.yml up -d
+docker compose -f docker compose.yml up -d
 
 # Scale services
-docker-compose up -d --scale rag-vidquest=3
+docker compose up -d --scale rag-vidquest=3
 
 # Monitor with logs
-docker-compose logs -f rag-vidquest
+docker compose logs -f rag-vidquest
 ```
 
 ### Cloud Deployment
@@ -197,7 +197,7 @@ curl http://localhost:8000/health
 curl http://localhost:8000/metrics
 
 # Check service status
-docker-compose ps
+docker compose ps
 ```
 
 ### Common Issues
@@ -205,25 +205,25 @@ docker-compose ps
 #### Service Not Starting
 ```bash
 # Check logs
-docker-compose logs rag-vidquest
+docker compose logs rag-vidquest
 
 # Restart services
-docker-compose restart
+docker compose restart
 
 # Rebuild if needed
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 #### Database Connection Issues
 ```bash
 # Check MongoDB
-docker-compose logs mongodb
+docker compose logs mongodb
 
 # Check Qdrant
-docker-compose logs qdrant
+docker compose logs qdrant
 
 # Restart databases
-docker-compose restart mongodb qdrant
+docker compose restart mongodb qdrant
 ```
 
 #### Performance Issues
@@ -232,7 +232,7 @@ docker-compose restart mongodb qdrant
 docker stats
 
 # Scale services
-docker-compose up -d --scale rag-vidquest=2
+docker compose up -d --scale rag-vidquest=2
 
 # Monitor metrics
 curl http://localhost:8000/metrics
@@ -344,8 +344,8 @@ for query in queries:
 
 ### Professional Support
 For enterprise support, custom development, or consulting:
-- Contact: [your-email@domain.com]
-- Documentation: [your-docs-url]
+- Contact: 147995121+Sahil170595@users.noreply.github.com
+- Documentation: https://github.com/Sahil170595/RAG_Vidquest/wiki
 - Training: Available upon request
 
 ## 🎉 Success!

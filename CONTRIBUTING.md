@@ -31,7 +31,7 @@ This project follows a code of conduct that we expect all contributors to adhere
 
 ### Prerequisites
 
-- Python 3.13+
+- Python 3.11+
 - Docker and Docker Compose
 - Git
 
@@ -39,7 +39,7 @@ This project follows a code of conduct that we expect all contributors to adhere
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/RAG_Vidquest.git
+   git clone https://github.com/Sahil170595/RAG_Vidquest.git
    cd RAG_Vidquest
    ```
 
@@ -56,7 +56,7 @@ This project follows a code of conduct that we expect all contributors to adhere
 
 4. Start the development environment:
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 5. Run tests:

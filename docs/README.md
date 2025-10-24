@@ -79,7 +79,7 @@ GET /metrics
 | `QDRANT_HOST` | Qdrant host | `localhost` |
 | `QDRANT_PORT` | Qdrant port | `6333` |
 | `OLLAMA_URL` | Ollama API URL | `http://localhost:11434/api/chat` |
-| `OLLAMA_MODEL` | Ollama model name | `gemma2:2b` |
+| `OLLAMA_MODEL` | Ollama model name | `gemma:2b` |
 | `LOG_LEVEL` | Logging level | `INFO` |
 | `SECRET_KEY` | Secret key for security | `your-secret-key` |
 
@@ -94,7 +94,7 @@ GET /metrics
 
 2. Start required services:
    ```bash
-   docker-compose up -d mongodb qdrant ollama redis
+   docker compose up -d mongodb qdrant ollama redis
    ```
 
 3. Run the application:
@@ -135,10 +135,10 @@ mypy src/
 
 ```bash
 # Development
-docker-compose up -d
+docker compose up -d
 
 # Production
-docker-compose --profile production up -d
+docker compose --profile production up -d
 ```
 
 ### Kubernetes
@@ -222,11 +222,11 @@ kubectl apply -f k8s/
 
 ```bash
 # View application logs
-docker-compose logs rag-vidquest
+docker compose logs rag-vidquest
 
 # View specific service logs
-docker-compose logs mongodb
-docker-compose logs qdrant
+docker compose logs mongodb
+docker compose logs qdrant
 ```
 
 ## Contributing

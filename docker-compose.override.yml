@@ -1,10 +1,10 @@
 # Docker Compose Override for Development
-# This file is automatically loaded by docker-compose for development overrides
+# This file is automatically loaded by docker compose for development overrides
 
 version: '3.8'
 
 services:
-  rag_vidquest_app:
+  rag-vidquest:
     build:
       context: .
       dockerfile: Dockerfile
@@ -74,7 +74,7 @@ services:
       sh -c "
         ollama serve &
         sleep 10 &&
-        ollama pull gemma3 &&
+        ollama pull gemma:2b &&
         wait
       "
 
